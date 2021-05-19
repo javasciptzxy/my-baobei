@@ -1,0 +1,107 @@
+a {
+    color: #666;
+
+    &:hover {
+        color          : #333;
+        text-decoration: none;
+    }
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+header {
+    .logo {
+        background-color: #429ad9;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .nav {
+        background-color: #eee;
+        border-bottom   : 1px solid #ccc;
+
+        .nav-item {
+
+            a {
+                display    : block;
+                height     : 50px;
+                line-height: 50px;
+
+                &::before {
+                    vertical-align: middle;
+                    margin-right  : 5px;
+                }
+
+            }
+
+            &:hover {
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+article {
+    .banner {
+        height: 266px;
+
+
+        .box-1,
+        .box-2,
+        .box-3,
+        .box-4,
+        .box-5 {
+            height : 133px;
+            // padding: 0;
+
+            a {
+                display : block;
+                height  : 100%;
+                position: relative;
+
+                img {
+                    width : 100%;
+                    height: 100%;
+                }
+
+                p {
+                    position        : absolute;
+                    left            : 0;
+                    bottom          : 0;
+                    margin-bottom   : 0;
+                    height          : 41px;
+                    line-height     : 41px;
+                    width           : 100%;
+                    color           : #fff;
+                    background-color: rgba(0, 0, 0, .5);
+                    padding-left    : 10px;
+                }
+            }
+        }
+
+        .box-1 {
+            height : 100%;
+            // padding: 0 10px 0 10px;
+        }
+
+        .box-2 {
+            // padding: 0 5px 5px 0;
+        }
+
+        .box-3 {
+            // padding: 0 0 5px 5px;
+        }
+
+        .box-4 {
+            // padding: 5px 5px 0 0;
+        }
+
+        .box-5 {
+            // padding: 5px 0 0 5px;
+        }
+    }
+}

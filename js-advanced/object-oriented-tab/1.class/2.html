@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // new Fa();
+    class Fa {
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+      }
+      sum() {
+        console.log(this.x + this.y);
+      }
+    }
+    // const uname 
+    class Son extends Fa {
+      constructor(x, y) {
+        // super放在this之前执行，调用父类构造函数
+
+        super(x, y);
+        this.x = 'x';
+        this.y = 'y';
+      }
+      sum() {
+        console.log('444');
+        // 
+        // console.log(this.name);
+        console.log(this.uname);
+
+      }
+    }
+
+    const son = new Son(1, 2);
+
+    console.dir(son)
+
+    son.sum();
+  </script>
+</body>
+
+</html>

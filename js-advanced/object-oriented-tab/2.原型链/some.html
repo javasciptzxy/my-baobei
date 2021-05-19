@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // some 
+    // 查找数组中是否包含满足条件的元素  包含 ==> true  不包含 ==> false
+    // filter 查找数组种满足条件的元素  返回满足条件的新数组
+    // 如果查找到满足条件的元素，停止循环
+
+    const arr2 = [{price: 5, name: '辣条'}, {price: 3, name: '可乐'}, {price: 2, name: '泡泡糖'}];
+
+    // 是否商品名称为辣条的元素
+    const flag = arr2.some(function (item, index, arr) {
+      console.log('some方法');
+      // return false;
+      return item.name === '辣条';
+    })
+
+    console.log(flag);
+
+  </script>
+</body>
+
+</html>

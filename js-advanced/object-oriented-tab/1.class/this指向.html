@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" id="in">
+  <script>
+    let that;
+    class Fa {
+      constructor(name) {
+        // this ==> 实例化对象
+        // this ==> super,子类实例
+        // new ==> 实例化对象
+        that = this;
+        this.name = name;
+        this.input = document.getElementById('in');
+        this.input.oninput = this.showContent;
+      }
+
+      showContent() {
+        // 输入的时候触发的
+        // this ==> Input
+        // 获取实例化对象
+        console.log(that.name); // 王晨冰输入 (输入框的值)
+        // name
+        // 输入框的值
+        console.log(this.value);
+        console.log(that.name + '输入了' + this.value);
+      }
+    }
+
+    const fa = new Fa('王晨冰');
+    // fa
+
+    // new Fa();
+  </script>
+</body>
+
+</html>

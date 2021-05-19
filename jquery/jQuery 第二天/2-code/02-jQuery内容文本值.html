@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <span>我是内容</span>
+    </div>
+    <input type="text" value="请输入内容">
+    <script>
+        // html(), text(),val()  三种方法都可以设置和获取元素(都可以读写)的值
+        // innerHTML, innerText, value
+        // 表单元素和其他的要区分开来
+
+        
+        // 1. 获取设置元素内容 html()
+        console.log($("div").html());
+        // $("div").html("123");
+        // 2. 获取设置元素文本内容 text()
+        console.log($("div").text());
+        $("div").text("123");
+
+        // 3. 获取设置表单值 val()
+        console.log($("input").val());
+        $("input").val("123");
+    </script>
+</body>
+
+</html>

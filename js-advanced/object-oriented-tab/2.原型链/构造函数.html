@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 1、字面量
+    const a = {}
+
+    // 2、new Object();
+    const b = new Object();
+
+    // 3、构造函数
+    function Animal(uname) {
+      // 1、空对象
+      // 2、this ==> 空对象
+      // 3、通过this赋值操作
+      this.uname = uname;
+      // 4、return这个对象被实例化对象接收
+    }
+
+    // 使用构造函数
+    const animal = new Animal('mimi');
+
+    // const username = '';
+
+    // function() {
+// 
+    // }
+  </script>
+</body>
+
+</html>

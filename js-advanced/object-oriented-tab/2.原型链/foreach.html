@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const arr = [{name: '辣条'}, {name: '可乐'}, {name: '泡泡糖'}];
+
+
+    // const arr2 = [{index: 1, name: '辣条'}, {index: 2, name: '可乐'}, {index: 3, name: '泡泡糖'}];
+    arr.forEach(function (item, index, arr) {
+      item.index = index + 1;
+    })
+
+    // console.log(arr);
+
+    // filter
+
+    // 筛选数组
+    // 返回值：满足筛选条件新数组
+    // 不会修改原数组
+
+    const arr1 = [2, 3, 4, 5];
+
+    // 筛选大于3的数组项目
+    const resArr1 = arr1.filter(function (item, index, arr) {
+      return item > 3;
+    })
+
+    console.log(resArr1);
+
+    const arr2 = [{price: 5, name: '辣条'}, {price: 3, name: '可乐'}, {price: 2, name: '泡泡糖'}];
+    // 筛选价格大于3的商品
+    const resArr2 = arr2.filter(function (item, index, arr) {
+      // item 当前遍历数组项
+      // index当前遍历索引
+      // arr原数组
+      return item.price > 3;
+      // return true;
+    })
+
+    console.log(resArr2);
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    class Fa {
+      constructor(x, y) {
+        console.log(this);
+        // this ==> son
+        this.x = x;
+        this.y = y;
+      }
+
+      sum() {
+        // this ==> 父类？
+        // console.log(this);
+        console.log(this.x + this.y);
+        // 
+      }
+    }
+
+    class Son extends Fa {
+      // 如果子类定义了constructor，并且没有调用super，报错
+      constructor(x, y) {
+        // 继承属性
+        // 调用父类constructor，同时把this指向子类实例
+        // this 
+        super(x, y);
+        // console.log(super);
+        // this.x = x;
+        // this.y = y;
+      }
+      // constructor(x, y) {
+      //   this.x = x;
+      //   this.y = y;
+      // }
+    }
+
+    class Sun extends Son {
+      sum() {
+        console.log('孙子');
+        console.log(super.sum());
+      }
+    }
+    const son = new Sun(2, 3);
+
+
+    // 普通函数的this指向是在 调用时候决定的
+
+    // const son1 = son.sum;
+    // son1();
+    son.sum();
+  </script>
+</body>
+
+</html>

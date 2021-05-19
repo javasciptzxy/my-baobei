@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 面向对象？面向过程？
+    // 继承 封装性 多态性
+
+    class Animal {
+      constructor(uname) {
+        // 什么时候执行
+        // this ==> 实例化对象
+        this.uname = uname;
+      }
+
+      say() {
+        console.log(this);
+      }
+    }
+
+    // 继承 组件库实现 类
+    // react  类组件
+    class Cat extends Animal {
+      constructor(uname) {
+        super(uname);
+      }
+
+      say() {
+        console.log('Cat');
+      }
+    }
+
+    const cat = new Cat('cat');
+
+    cat.say() // 
+  </script>
+</body>
+
+</html>

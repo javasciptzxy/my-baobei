@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // const let var
+    // 
+    // 早餐店
+    // 面向过程
+    // 蒸笼
+    // 炒饭
+    // 豆浆
+    // 
+    // 猫   🐱
+
+    // Animal
+
+    // cat
+    // {
+    //   uname: '咪咪',
+    //     age: 1,
+    //       photo: '🐱'
+    // }
+    // // dog
+    // {
+    //   uname: '汪汪',
+    //   age: 1,
+    //   photo: '🐶'
+    // }
+
+    class Animal {
+      constructor(uname, age, photo) {
+        this.uname = uname;
+        this.age = age;
+        this.photo = photo;
+      }
+
+      say(word) {
+        // uname
+        // this ==> cat
+        console.log(this.uname + '说了' + word);
+      }
+    }
+    const cat = new Animal('咪咪', 1, '🐱'); // say (一句话) 咪咪说了 一句话
+    const dog = new Animal('汪汪', 2, '🐶'); // say (又是一句话) 汪汪说了 又是一句话
+    cat.say('王成兵你好');
+    dog.say('王成兵你好');
+
+    // Promise
+
+
+    // debugger
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery发起GET请求</title>
+    <script src="lib/jquery.js"></script>
+  </head>
+  <body>
+    <button id="sendGET">点击发起GET请求</button>
+    <!-- 1. 引入jQuery -->
+    <script>
+      $('#sendGET').click(function () {
+        // 请求的URL：http://www.liulongbin.top:3006/api/getbooks
+        let url = 'http://www.liulongbin.top:3006/api/getbooks'
+        // 参考步骤：
+        // 1. 引入 jQuery，在对应的lib目录下
+        // 2. 调用 $.get() 方法，传递请求的url地址和回调函数
+        // 3. 打印回调函数的参数
+        $.get(url, (res) => {
+          console.log(res)
+        })
+      })
+    </script>
+  </body>
+</html>

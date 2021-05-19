@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 原型链
+    // 继承
+    // 借用父构造函数继承属性
+    // 1. 父构造函数
+    function Father(uname, age) {
+      // this 指向父构造函数的对象实例
+      // console.log(this);
+      this.uname = uname;
+      this.age = age;
+    }
+    Father.prototype.sing = function () {
+      console.log('唱歌');
+    }
+    // 2 .子构造函数 
+    function Son(uname, age, score) {
+      // this ==> son
+      // this.uname = uname;
+      // this.age = age;
+      // this 指向子构造函数的对象实例
+
+      // TODO: 1、继承实例属性
+      Father.call(this, uname, age);
+      this.score = score;
+    }
+    // TODO: 2、继承原型方法
+    Son.prototype = new Father(); // {}
+
+    // TODO: 3、构造函数指向回自己
+    Son.prototype.constructor = Son;
+
+    var son = new Son('刘德华', 18, 100);
+    console.log(son);
+    son.sing();
+  </script>
+</body>
+
+</html>
